@@ -12,7 +12,7 @@ public class TxtRecuperateur {
 		this.txtFile = new File(txtFile);
 	}
 	
-	public void getTable() {
+	private void getTable() {
 		try {
 			for (String iterable_element : getWords()) {
 				System.out.println(iterable_element);
@@ -22,7 +22,6 @@ public class TxtRecuperateur {
 			e.printStackTrace();
 		}
 	}
-	
 	public ArrayList<String> getWords() throws FileNotFoundException {
 		Scanner myReader = new Scanner(this.txtFile);
 		ArrayList<String> insertWord = new ArrayList<>();

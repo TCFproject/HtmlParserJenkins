@@ -3,7 +3,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,7 +56,7 @@ public class HtmlAgentPerser extends HtmlPerser {
 						+ "          <p class=\"job\">"+this.infoAgent.get(2)+"</p>\r\n"
 						+ "          <p class=\"mdp\">"+this.infoAgent.get(3)+"</p>\r\n"
 						+ "        </div>");
-				
+				bw.write("<img id=\"carteId\" src=\""+parseNameFile[0]+".jpg \""+"></div>");
 				bw.write("<div class=\"list\">\r\n"
 						+ "        <ul class=\"list_item\">\r\n"
 						+ "          ");
@@ -75,14 +74,6 @@ public class HtmlAgentPerser extends HtmlPerser {
 						e.printStackTrace();
 					}
 				});
-				/*bw.write(this.outils.get(this.infoAgent.get(5)));
-				bw.write("</li>");
-				bw.write("<li>\r\n"
-						+"<input type=\"checkbox\" name=\"gant\" id=\"gant\" />");
-				bw.write(this.outils.get(this.infoAgent.get(6)));
-				bw.write("<li>\r\n"
-						+"<input type=\"checkbox\" name=\"gant\" id=\"gant\" />");
-				bw.write(this.outils.get(this.infoAgent.get(7)));*/
 				
 				bw.write( "        </ul>\r\n"
 						+ "      </div>\r\n"
@@ -97,5 +88,4 @@ public class HtmlAgentPerser extends HtmlPerser {
 		}
 		return this.parseFile;
 	}
-
 }

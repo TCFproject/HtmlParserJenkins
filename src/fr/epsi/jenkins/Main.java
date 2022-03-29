@@ -1,5 +1,4 @@
 package fr.epsi.jenkins;
-import java.awt.Desktop;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -22,9 +21,12 @@ public class Main {
 		try {
 			listParser.add(new HtmlIndexPerser(txtRecup.getWords()));
 			for (String fichier :nomFichier) {
-				if (!fichier.equals("staff.txt") && !fichier.equals("list.txt") && fichier.contains(".txt")) {
+				if (!fichier.equals("staff.txt") &&
+						!fichier.equals("list.txt") &&
+						fichier.contains(".txt") || fichier.contains(".jpg")) {
 					TxtRecuperateur identitesAgents = new TxtRecuperateur(cheminDeBase+fichier);
-					listParser.add(new HtmlAgentPerser(fichier,identitesAgents.getWords(), outilRecup.getWords()));
+					listParser.add(new HtmlAgentPerser(fichier,identitesAgents.getWords(), 
+							outilRecup.getWords()));
 				}
 			}
 			for (HtmlPerser htmlPerser : listParser) {
@@ -39,17 +41,7 @@ public class Main {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		/*String[] pathnames;
-		File f = new File("C:\\Users\\THIERRY\\Desktop\\listAgent");
-		for (String string : pathnames) {
-			System.out.println(string);
-		}*/
-		
-		//Pour l'éxecuter : java -cp .\fr\epsi\jenkins; fr.epsi.jenkins.Main
 	}
-
+	
 }
