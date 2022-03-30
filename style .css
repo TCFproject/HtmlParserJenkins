@@ -1,0 +1,47 @@
+body{
+    background: rgb(101,146,36);
+background: linear-gradient(270deg, rgba(101,146,36,1) 0%, rgba(101,146,36,1) 35%, rgba(55,158,193,1) 100%);
+}
+/* ======= Liste Agent ========= */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list_employee{
+    list-style: none;
+}
+.employee{
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
+.employee a{
+    text-decoration: none;
+    color: #000;
+}
+/* ======= Fiche Agent ========= */
+.container{
+    font-family: 'Roboto', sans-serif;
+}
+.identity{
+    display: flex;
+    justify-content: space-between;
+}
+.firstName{
+    font-size: 2rem;
+}
+.lastName{
+    font-size: 2rem;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.list_item{
+    list-style: none;
+    font-size: 1.5rem;
+}

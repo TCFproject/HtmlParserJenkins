@@ -12,7 +12,8 @@ public class HtmlAgentPerser extends HtmlPerser {
 	private ArrayList<String> infoAgent;
 	private HashMap<String, String> outils = new HashMap<>();
 	
-	public HtmlAgentPerser(String nomFichier, ArrayList<String> infoAgent, ArrayList<String> outils) {
+	public HtmlAgentPerser(String nomFichier,
+			ArrayList<String> infoAgent, ArrayList<String> outils) {
 		this.nomFichier = nomFichier;
 		this.infoAgent = infoAgent;
 		for (String parse_outils : outils) {

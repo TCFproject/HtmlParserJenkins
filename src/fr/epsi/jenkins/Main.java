@@ -9,8 +9,6 @@ public class Main {
 
 	public static String cheminDeBase = "C:\\xampp\\htdocs\\equipements\\";
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//String cheminBureau = "C:\\Users\\THIERRY\\Desktop\\";
 		String[] nomFichier;
 		File f = new File(cheminDeBase);
 		nomFichier = f.list();
